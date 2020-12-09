@@ -12,3 +12,15 @@ import UIKit
  abcMath(5, 2, 1) ➞ true
  abcMath(1, 2, 3) ➞ false
  */
+
+func abcMath(_ a: Int, _ b: Int , _ c: Int) -> Bool {
+    var aAdd = a, bCheck = b
+    repeat{
+        aAdd += aAdd
+        bCheck -= 1
+    }while bCheck > 0
+    return a % c == 0 ? true : false
+}
+
+abcMath(5, 2, 1)
+abcMath(1, 2, 3)
